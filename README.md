@@ -80,8 +80,8 @@ func _rc_on_login_request_completed(id: String) -> void:
 
 	# Most requests, if not all of them, are async. Paired with `await` you can get
 	# quite a bit of control on whether a request is asynchronous or synchronous.
-	# In this case, though, we need it to be asynchronous, otherwise we would not
-	# be able to get the result of the request.
+	# In this case, though, we need it to be synchronous, otherwise we would not be
+	# able to get the result of the request.
 	var subs: Array[RocketChat.Subscription] = await rc.get_subscriptions()
 
 	print("Available subscriptions:")
